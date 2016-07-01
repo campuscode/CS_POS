@@ -4,6 +4,7 @@ class ChallengesController < ApplicationController
   before_action :set_challenge, only: [:show, :complete, :start]
 
   def show
+    @comments = @challenge.comments.includes(:user)
   end
 
   def new

@@ -11,4 +11,5 @@ class Challenge < ActiveRecord::Base
   def started_challenge_for(user)
     started_challenges.find_by(user: user)
   end
+
 end

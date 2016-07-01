@@ -1,0 +1,8 @@
+<div class="comments">
+  <% comments.each do |comment| %>
+    <div class="comment">
+      <small>Comentado por: <%= comment.user.login %></small>
+      <p><%= comment.body %></p>
+    </div>
+  <% end %>
+</div>

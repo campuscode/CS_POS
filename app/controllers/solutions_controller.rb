@@ -4,6 +4,7 @@ class SolutionsController < ApplicationController
   before_action :authorize!, only: [:show]
 
   def show
+    @comments = @solution.comments.includes(:user)
   end
 
   private
